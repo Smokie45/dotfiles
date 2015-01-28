@@ -1,0 +1,160 @@
+! change some keys to be compatible with xterm for VIM
+!URxvt.keysym.Up              : \033[A  !breaks arrow keys in Vim
+!URxvt.keysym.Down            : \033[B  !breaks arrow keys in Vim
+!URxvt.keysym.Right           : \033[C  !breaks arrow keys in Vim
+!URxvt.keysym.Left            : \033[D  !breaks arrow keys in Vim
+!URxvt.keysym.Page_Up         : \033[5~ !breaks scrolling in Rxvt
+!URxvt.keysym.Page_Down       : \033[6~ !breaks scrolling in Rxvt
+!URxvt.keysym.Home            : \033[H  !breaks navigation in Vim
+!URxvt.keysym.End             : \033[F  !breaks navigation in Vim
+URxvt.keysym.S-Up             : \033[1;2A
+URxvt.keysym.S-Down           : \033[1;2B
+URxvt.keysym.S-Right          : \033[1;2C
+URxvt.keysym.S-Left           : \033[1;2D
+!URxvt.keysym.S-Page_Up       : captured by terminal for scrolling
+!URxvt.keysym.S-Page_Down     : captured by terminal for scrolling
+URxvt.keysym.S-Home           : \033[1;2H
+URxvt.keysym.S-End            : \033[1;2F
+URxvt.keysym.M-Up             : \033[1;3A
+URxvt.keysym.M-Down           : \033[1;3B
+URxvt.keysym.M-Right          : \033[1;3C
+URxvt.keysym.M-Left           : \033[1;3D
+URxvt.keysym.M-Page_Up        : \033[5;3~
+URxvt.keysym.M-Page_Down      : \033[6;3~
+URxvt.keysym.M-Home           : \033[1;3H
+URxvt.keysym.M-End            : \033[1;3F
+URxvt.keysym.M-S-Up           : \033[1;4A
+URxvt.keysym.M-S-Down         : \033[1;4B
+URxvt.keysym.M-S-Right        : \033[1;4C
+URxvt.keysym.M-S-Left         : \033[1;4D
+!URxvt.keysym.M-S-Page_Up     : captured by terminal for scrolling
+!URxvt.keysym.M-S-Page_Down   : captured by terminal for scrolling
+URxvt.keysym.M-S-Home         : \033[1;4H
+URxvt.keysym.M-S-End          : \033[1;4F
+URxvt.keysym.C-Up             : \033[1;5A
+URxvt.keysym.C-Down           : \033[1;5B
+URxvt.keysym.C-Right          : \033[1;5C
+URxvt.keysym.C-Left           : \033[1;5D
+URxvt.keysym.C-Page_Up        : \033[5;5~
+URxvt.keysym.C-Page_Down      : \033[6;5~
+URxvt.keysym.C-Home           : \033[1;5H
+URxvt.keysym.C-End            : \033[1;5F
+URxvt.keysym.C-S-Up           : \033[1;6A
+URxvt.keysym.C-S-Down         : \033[1;6B
+URxvt.keysym.C-S-Right        : \033[1;6C
+URxvt.keysym.C-S-Left         : \033[1;6D
+!URxvt.keysym.C-S-Page_Up     : captured by terminal for scrolling
+!URxvt.keysym.C-S-Page_Down   : captured by terminal for scrolling
+URxvt.keysym.C-S-Home         : \033[1;6H
+URxvt.keysym.C-S-End          : \033[1;6F
+URxvt.keysym.M-C-Up           : \033[1;7A
+URxvt.keysym.M-C-Down         : \033[1;7B
+URxvt.keysym.M-C-Right        : \033[1;7C
+URxvt.keysym.M-C-Left         : \033[1;7D
+URxvt.keysym.M-C-Page_Up      : \033[5;7~
+URxvt.keysym.M-C-Page_Down    : \033[6;7~
+URxvt.keysym.M-C-Home         : \033[1;7H
+URxvt.keysym.M-C-End          : \033[1;7F
+URxvt.keysym.M-C-S-Up         : \033[1;8A
+URxvt.keysym.M-C-S-Down       : \033[1;8B
+URxvt.keysym.M-C-S-Right      : \033[1;8C
+URxvt.keysym.M-C-S-Left       : \033[1;8D
+!URxvt.keysym.M-C-S-Page_Up   : captured by terminal for scrolling
+!URxvt.keysym.M-C-S-Page_Down : captured by terminal for scrolling
+URxvt.keysym.M-C-S-Home       : \033[1;8H
+URxvt.keysym.M-C-S-End        : \033[1;8F
+
+!URxvt.depth: 32
+URxvt*background: #3f3f3f
+URxvt.foreground: #dcdccc
+ 
+URxvt.saveLines:32767
+URxvt.scrollBar: false
+ 
+!URxvt*font: xft:Terminus:pixelsize=12
+URxvt*font: xft:SourceCodePro:size=9
+ 
+URxvt.perl-ext-common: default,matcher,selection-to-clipboard
+URxvt.url-launcher: /usr/bin/google-chrome-stable
+URxvt.matcher.button: 2
+URxvt.matcher.pattern.1: \\bwww\\.[\\w-]\\.[\\w./?&@#-]*[\\w/-]
+ 
+URxvt*colorUL: #c5f779
+URxvt*underlineColor: #c5f779
+
+! Scroll down on new input?
+URxvt*scrollTtyOutput:  false
+! scroll down on keypress
+URxvt*scrollTtyKeypress:  true
+
+
+! fade font in %, if focus is lost
+URxvt*fading:  30
+
+URxvt*color0:	#3f3f3f
+URxvt*color1:       #705050
+URxvt*color2:     #60b48a
+URxvt*color3:    #dfaf8f
+URxvt*color4:      #506070
+URxvt*color5:   #dc8cc3
+URxvt*color6:      #8cd0d3
+URxvt*color7:     #DCDCCC
+ 
+URxvt*color8:      #709080
+URxvt*color9:      #cc9393
+URxvt*color10:    #7f9f7f
+URxvt*color11:   #f0dfaf
+URxvt*color12:     #94bff3
+URxvt*color13:  #ec93d3
+URxvt*color14:    #93e0e3
+URxvt*color15:          #ffffff
+ 
+!black
+xterm*color0:         #353535
+xterm*color8:         #666666
+!red
+xterm*color1:         #AE4747
+xterm*color9:         #EE6363
+!green
+xterm*color2:         #556B2F
+xterm*color10:        #9ACD32
+!brown/yellow
+xterm*color3:         #DAA520
+xterm*color11:        #FFC125
+!blue
+xterm*color4:         #6F99B4
+xterm*color12:        #7C96B0
+!magenta
+xterm*color5:         #8B7B8B
+xterm*color13:        #D8BFD8
+!cyan
+xterm*color6:         #A7A15E
+xterm*color14:        #F0E68C
+!white
+xterm*color7:         #DDDDDD
+xterm*color15:        #FFFFFF
+
+xterm*iconName:Terminal
+xterm*eightBitInput:    false
+xterm*cursorBlink:      true
+xterm*faceName: Sourcecodepro
+xterm*cursorOffTime:    300
+xterm*metaSendsEscape:  true
+xterm*faceSize: 10 
+xterm*Background:     #000000
+xterm*title:    Terminal
+xterm*cursorOnTime:     300
+xterm*utf8:     1
+xterm*Foreground:       #E6E6E6
+xterm*geometry: 110x31
+xterm*cursorUnderLine:  true
+Xft.antialias: 1
+Xft.autohint: 0
+Xft.dpi: 96
+Xft.hinting: 1
+Xft.hintstyle: hintfull
+Xft.lcdfilter: lcddefault
+Xft.rgba: rgb
+
+urxvt*termName: rxvt-256color
+
