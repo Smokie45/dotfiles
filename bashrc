@@ -3,6 +3,7 @@
 [ -z "$PS1" ] && return
 
 alias ls='ls --color=auto'
+alias ll='ls -l'
 alias vi='vim'
 alias n='netstat -tpe'
 
@@ -11,4 +12,6 @@ export PATH=$PATH:~/bin
 
 export EDITOR=/usr/bin/vim
 export xterm=xterm-256color
+export BROWSER=google-chrome-stable
+
 

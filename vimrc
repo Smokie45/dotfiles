@@ -6,8 +6,37 @@
 autocmd QuickFixCmdPost [^l]* nested cwindow
 autocmd QuickFixCmdPost    l* nested lwindow
 
+" switch background color between insert/normal mode (TODO)
+" au InsertEnter * hi Normal ctermfg=188 ctermbg=8 guibg=#000000
+" au InsertLeave * hi Normal ctermfg=188 ctermbg=236 guibg=#000000
+
+" clear highliting of CursorLine
+hi clear CursorLine
+augroup CLClear
+    autocmd! ColorScheme * hi clear CursorLine
+augroup END
+" set highlighting for CursorLineNR (line numbers)
+hi CursorLineNR cterm=bold
+augroup CLNRSet
+    autocmd! ColorScheme * hi CursorLineNR cterm=bold
+augroup END
+
+" " clear highliting of CursorLine
+" hi clear CursorLine
+" augroup CLClear
+"     autocmd! ColorScheme * hi clear CursorLine
+" augroup END
+" " set highlighting for CursorLineNR (line numbers)
+" hi CursorLineNR cterm=bold
+" augroup CLNRSet
+"     autocmd! ColorScheme * hi CursorLineNR cterm=bold
+" augroup END
+
 " set cmd window heigth, to solve 2x <CR> problems
 ":set cmdheight=2
+
+" make cursor visible with line
+set cursorline
 
 " set nocp
 :filetype plugin on
@@ -26,6 +55,7 @@ set foldtext=MyfoldText()
 set foldmethod=syntax
 " open all folds after reading a buffer (does not work)
 "au BufRead * normal zR	
+autocmd Syntax * normal zR
 
 " XML folding
 let g:xml_syntax_folding=1
@@ -147,6 +177,7 @@ map <C-p> :cp<CR>
 
 " map NERDTree to F2
 nmap <F2> :NERDTreeToggle<CR>
+let NERDTreeQuitOnOpen=1
 " toggle tcomment
 map _ : TComment<CR>
 " Tagbar
@@ -171,6 +202,8 @@ nmap <S-Enter> O<Esc>
 noremap <silent><esc> <esc>:noh<CR><esc>
 " map search word below cursor in files
 noremap + :grep! -rI --exclude=tags --exclude-dir="\.git" <cword> *<cr>
+"search for word below cursor and replace
+nnoremap <C-h> :%s/\<<C-r><C-w>\>/
 
 " auto reload vimrc if changed within vim
 augroup myvimrc
